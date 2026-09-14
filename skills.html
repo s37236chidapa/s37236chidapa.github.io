@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portfolio | ฟูจิ</title>
+<title>ทักษะทั้งหมด | ฟูจิ</title>
 
 <style>
 
@@ -14,57 +14,11 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: Tahoma, sans-serif;
     background: #fff0f6;
     color: #4d3540;
     line-height: 1.8;
-}
-
-/* ===== HEADER ===== */
-
-header {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #ff82ad, #ffc1d8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px 20px;
-    color: white;
-}
-
-.hero {
-    max-width: 800px;
-}
-
-.profile {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 7px solid white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-.hero h1 {
-    font-size: 38px;
-    margin-top: 25px;
-}
-
-.hero h2 {
-    font-size: 21px;
-    font-weight: normal;
-    margin-top: 8px;
-}
-
-.hero p {
-    font-size: 17px;
-    margin-top: 8px;
 }
 
 /* ===== MENU ===== */
@@ -108,8 +62,18 @@ section {
     margin-bottom: 18px;
 }
 
-section p {
+/* ===== SKILL LIST ===== */
+
+.skill-list {
+    list-style: none;
+}
+
+.skill-list li {
     font-size: 17px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background: #fff0f6;
+    border-radius: 12px;
 }
 
 /* ===== BUTTON ===== */
@@ -129,31 +93,6 @@ section p {
     background: #cf4776;
 }
 
-/* ===== SKILLS ===== */
-
-.skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-}
-
-.skill {
-    background: #fff0f6;
-    padding: 20px;
-    border-radius: 18px;
-    text-align: center;
-}
-
-/* ===== CONTACT ===== */
-
-.contact {
-    background: #fff5f9;
-}
-
-.contact p {
-    margin: 8px 0;
-}
-
 /* ===== FOOTER ===== */
 
 footer {
@@ -166,20 +105,6 @@ footer {
 /* ===== MOBILE ===== */
 
 @media (max-width: 600px) {
-
-    .profile {
-        width: 160px;
-        height: 160px;
-    }
-
-    .hero h1 {
-        font-size: 27px;
-    }
-
-    .hero h2 {
-        font-size: 18px;
-    }
-
     nav a {
         font-size: 14px;
         margin: 0 5px;
@@ -188,7 +113,6 @@ footer {
     section {
         padding: 25px;
     }
-
 }
 
 </style>
@@ -197,201 +121,45 @@ footer {
 
 <body>
 
-<!-- ===== หน้าแรก ===== -->
-
-<header>
-
-    <div class="hero">
-
-        <img
-            src="IMG_5239.jpeg"
-            alt="รูปโปรไฟล์ของฟูจิ"
-            class="profile"
-        >
-
-        <h1>นางสาว จิดาภา เรืองป้อม</h1>
-
-        <h2>ชื่อเล่น : ฟูจิ</h2>
-
-        <p>นักเรียนชั้นมัธยมศึกษาปีที่ 6/8</p>
-
-        <p>โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
-
-        <a href="#about" class="button">
-            🌷 ทำความรู้จักฉัน
-        </a>
-
-    </div>
-
-</header>
-
-
-<!-- ===== เมนู ===== -->
-
 <nav>
 
-    <a href="#about">เกี่ยวกับฉัน</a>
+    <a href="./index.html">หน้าแรก</a>
 
-    <a href="#goal">เป้าหมาย</a>
+    <a href="./index.html#about">เกี่ยวกับฉัน</a>
 
-    <a href="skills.html">ทักษะ</a>
+    <a href="./index.html#goal">เป้าหมาย</a>
 
-    <a href="#activities">กิจกรรม</a>
+    <a href="./skills.html">ทักษะ</a>
 
-    <a href="#contact">ติดต่อ</a>
+    <a href="./index.html#activities">กิจกรรม</a>
+
+    <a href="./index.html#contact">ติดต่อ</a>
 
 </nav>
 
 
 <div class="container">
 
-
-<!-- ===== ABOUT ===== -->
-
-<section id="about">
-
-    <h2 class="title">🌷 เกี่ยวกับฉัน</h2>
-
-    <p>
-        หนูเป็นคนที่ชอบพูดคุยและทำงานร่วมกับผู้อื่น
-        ถึงจะเป็นคนค่อนข้างขี้อาย แต่หนูก็พยายามพัฒนาตัวเอง
-        และกล้าแสดงออกมากขึ้นอยู่เสมอค่ะ
-    </p>
-
-    <br>
-
-    <p>
-        หนูมีความสนใจด้านภาษา การสื่อสาร
-        และการทำงานที่ได้พบปะผู้คน
-        เป็นคนที่พร้อมเรียนรู้สิ่งใหม่ ๆ
-        และพยายามพัฒนาตัวเองอยู่เสมอค่ะ
-    </p>
-
-</section>
-
-
-<!-- ===== GOAL ===== -->
-
-<section id="goal">
-
-    <h2 class="title">🎯 เป้าหมายในอนาคต</h2>
-
-    <p>
-        ต้องการศึกษาต่อด้านบริหารธุรกิจ
-        โดยสนใจสาขาการจัดการอุตสาหกรรมท่องเที่ยวและบริการ
-        เพราะเป็นสาขาที่ได้ใช้ทั้งทักษะด้านภาษา
-        การสื่อสาร และการทำงานร่วมกับผู้อื่น
-    </p>
-
-    <br>
-
-    <p>
-        หนูอยากนำความรู้ที่ได้รับไปต่อยอดในการทำงาน
-        และมีอาชีพที่มั่นคงในอนาคตค่ะ
-    </p>
-
-</section>
-
-
-<!-- ===== SKILLS PREVIEW ===== -->
-
 <section>
 
-    <h2 class="title">💗 ทักษะของฉัน</h2>
+    <h2 class="title">💖 ทักษะและความสามารถทั้งหมด</h2>
 
-    <div class="skills">
+    <ul class="skill-list">
+        <li>💬 ทักษะการสื่อสารและการพูดคุยกับผู้อื่น</li>
+        <li>🤝 ทักษะการทำงานเป็นทีม</li>
+        <li>🇨🇳 ทักษะด้านภาษาจีนและภาษาอังกฤษ</li>
+        <li>🌱 สามารถเรียนรู้สิ่งใหม่ ๆ และปรับตัวได้ดี</li>
+        <li>✨ มีความรับผิดชอบและตั้งใจทำงาน</li>
+    </ul>
 
-        <div class="skill">
-            💬<br>
-            การสื่อสาร
-        </div>
-
-        <div class="skill">
-            🤝<br>
-            การทำงานเป็นทีม
-        </div>
-
-        <div class="skill">
-            🇨🇳<br>
-            ภาษาจีน
-        </div>
-
-        <div class="skill">
-            🇬🇧<br>
-            ภาษาอังกฤษ
-        </div>
-
-    </div>
-
-    <a href="skills.html" class="button">
-        🌸 ดูทักษะทั้งหมด
+    <a href="./index.html" class="button">
+        ⬅ กลับหน้าหลัก
     </a>
 
 </section>
 
-
-<!-- ===== ACTIVITIES ===== -->
-
-<section id="activities">
-
-    <h2 class="title">🎀 กิจกรรม</h2>
-
-    <p>
-        กำลังรวบรวมกิจกรรมต่าง ๆ ที่เคยเข้าร่วม
-        ทั้งกิจกรรมภายในโรงเรียนและกิจกรรมอื่น ๆ
-    </p>
-
-</section>
-
-
-<!-- ===== CERTIFICATES ===== -->
-
-<section>
-
-    <h2 class="title">🏆 เกียรติบัตร</h2>
-
-    <p>
-        กำลังรวบรวมเกียรติบัตรและผลงานต่าง ๆ
-        เพื่อเพิ่มลงใน Portfolio
-    </p>
-
-</section>
-
-
-<!-- ===== HOBBY ===== -->
-
-<section>
-
-    <h2 class="title">🎵 งานอดิเรกและความสนใจ</h2>
-
-    <p>
-        ชอบฟังเพลง ดูหนังและซีรีส์
-        นอกจากนี้ยังสนใจเรื่องภาษา การท่องเที่ยว
-        และการเรียนรู้วัฒนธรรมใหม่ ๆ
-    </p>
-
-</section>
-
-
-<!-- ===== CONTACT ===== -->
-
-<section id="contact" class="contact">
-
-    <h2 class="title">📞 ช่องทางติดต่อ</h2>
-
-    <p>📱 โทรศัพท์ : 082-215-0897</p>
-
-    <p>📧 Email : jidapareungpom@gmail.com</p>
-
-    <p>📷 Instagram : @jidxpa_21</p>
-
-</section>
-
-
 </div>
 
-
-<!-- ===== FOOTER ===== -->
 
 <footer>
 
