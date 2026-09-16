@@ -8,15 +8,16 @@
 
 <style>
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Tahoma, sans-serif;
-    background: #fff5f9;
+    background: #fff0f6;
     color: #4d3540;
+    line-height: 1.8;
 }
 
 nav {
@@ -29,35 +30,42 @@ nav {
 }
 
 nav a {
-    text-decoration: none;
     color: #d94f87;
+    text-decoration: none;
     font-weight: bold;
-    margin: 0 12px;
+    margin: 4px 8px;
+    padding: 8px 12px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background: #ffe0ec;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
     padding: 45px 20px;
 }
 
-h1 {
-    text-align: center;
-    color: #d94f87;
-    margin-bottom: 35px;
+.title {
+    color: #df5b8b;
+    font-size: 28px;
+    margin-bottom: 25px;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 25px;
 }
 
 .card {
     background: white;
     border-radius: 22px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(220,80,130,0.12);
+    box-shadow: 0 5px 20px rgba(230,90,140,0.12);
 }
 
 .card img {
@@ -66,21 +74,47 @@ h1 {
     object-fit: contain;
     background: white;
     padding: 10px;
+    display: block;
 }
 
 .content {
-    padding: 25px;
+    padding: 22px;
 }
 
-.content h2 {
+.content h3 {
     color: #d94f87;
-    font-size: 21px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .content p {
-    line-height: 1.8;
-    margin-bottom: 10px;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.page-buttons {
+    max-width: 1000px;
+    margin: 30px auto 50px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-button {
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back {
+    background: white;
+    color: #d94f87;
+    border: 2px solid #f2a4c2;
+}
+
+.next {
+    background: #df5b8b;
+    color: white;
 }
 
 footer {
@@ -90,14 +124,7 @@ footer {
     padding: 25px;
 }
 
-@media(max-width:700px) {
-
-    nav a {
-        display: inline-block;
-        margin: 5px 7px;
-        font-size: 14px;
-    }
-
+@media (max-width: 700px) {
     .grid {
         grid-template-columns: 1fr;
     }
@@ -109,7 +136,7 @@ footer {
 
 <nav>
     <a href="index.html">🏠 หน้าหลัก</a>
-    <a href="about.html">👩🏻 ประวัติ</a>
+    <a href="about.html">👩 ประวัติ</a>
     <a href="portfolio.html">🎀 ผลงาน</a>
     <a href="certificates.html">🏆 เกียรติบัตร</a>
     <a href="skills.html">💗 ทักษะ</a>
@@ -118,66 +145,71 @@ footer {
 
 <div class="container">
 
-    <h1>🏆 เกียรติบัตร</h1>
+    <h2 class="title">🏆 เกียรติบัตรและกิจกรรม</h2>
 
     <div class="grid">
 
         <div class="card">
 
-            <img
-                src="certificate1.jpeg.JPG"
-                alt="เกียรติบัตร Chinese for Fun"
-            >
+            <img src="certificate1.JPG" alt="เกียรติบัตร Chinese for Fun">
 
             <div class="content">
 
-                <h2>🇨🇳 Chinese for Fun: One-day Camp</h2>
+                <h3>🇨🇳 Chinese for Fun: One-day Camp</h3>
 
                 <p>
-                    ได้เข้าร่วมกิจกรรม Chinese for Fun: One-day Camp
-                    ของมหาวิทยาลัยธุรกิจบัณฑิตย์
-                    ได้เรียนรู้และฝึกทักษะภาษาจีนผ่านกิจกรรมที่สนุกสนาน
-                    เปิดประสบการณ์ใหม่ ๆ
-                    และพัฒนาความมั่นใจในการใช้ภาษาจีนมากขึ้น
+                    ได้เข้าร่วมกิจกรรม Chinese for Fun:
+                    One-day Camp ของมหาวิทยาลัยธุรกิจบัณฑิตย์
+                    ทำให้ได้เรียนรู้และฝึกทักษะภาษาจีน
+                    ผ่านกิจกรรมที่สนุกสนาน
+                    ได้เปิดประสบการณ์ใหม่ ๆ
+                    และได้พัฒนาความมั่นใจในการใช้ภาษาจีนมากขึ้น
                 </p>
 
-                <p>📅 วันที่ 1 กุมภาพันธ์ 2025</p>
-
             </div>
+
         </div>
 
 
         <div class="card">
 
-            <img
-                src="certificate2.jpeg.JPG"
-                alt="เกียรติบัตรการแข่งขันคัดลายมือภาษาจีน"
-            >
+            <img src="certificate2.JPG" alt="การแข่งขันคัดลายมือภาษาจีน">
 
             <div class="content">
 
-                <h2>✍️ การประกวดคัดลายมือภาษาจีน</h2>
+                <h3>✍️ การแข่งขันคัดลายมือภาษาจีน</h3>
 
                 <p>
                     ได้เข้าร่วมการแข่งขันคัดลายมือภาษาจีน
                     เป็นกิจกรรมที่ช่วยฝึกสมาธิ
-                    ความละเอียดรอบคอบ
-                    และทักษะด้านภาษาจีน
+                    ความละเอียดรอบคอบ และทักษะด้านภาษาจีน
                     อีกทั้งยังเป็นประสบการณ์
                     ที่ทำให้ได้พัฒนาตัวเองมากขึ้น
                 </p>
 
-                <p>📅 วันที่ 1 สิงหาคม 2569</p>
-
             </div>
+
         </div>
 
     </div>
 
 </div>
 
+<div class="page-buttons">
+
+    <a href="portfolio.html" class="page-button back">
+        ← ก่อนหน้า
+    </a>
+
+    <a href="skills.html" class="page-button next">
+        ต่อไป →
+    </a>
+
+</div>
+
 <footer>
     <p>💗 Jidapa Rueangpom - Portfolio 💗</p>
+    <p>© 2026</p>
 </footer>
 
 </body>
