@@ -1,946 +1,187 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Portfolio | ฟูจิ</title>
 
 <style>
-
-/* =========================
-   พื้นฐาน
-========================= */
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
     font-family: Tahoma, sans-serif;
-    background: #fff0f6;
+    background: #fff5f9;
     color: #4d3540;
-    line-height: 1.8;
 }
-
-
-/* =========================
-   HEADER
-========================= */
-
-header {
-    min-height: 100vh;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ff82ad,
-            #ffc1d8
-        );
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    padding: 30px 20px;
-
-    color: white;
-}
-
-.hero {
-    max-width: 800px;
-}
-
-.profile {
-    width: 200px;
-    height: 200px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border: 7px solid white;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.15);
-}
-
-.hero h1 {
-    font-size: 38px;
-    margin-top: 25px;
-}
-
-.hero h2 {
-    font-size: 21px;
-    font-weight: normal;
-    margin-top: 8px;
-}
-
-.hero p {
-    font-size: 17px;
-    margin-top: 8px;
-}
-
-
-/* =========================
-   MENU
-========================= */
 
 nav {
-    position: sticky;
-
-    top: 0;
-
-    z-index: 100;
-
     background: white;
-
-    padding: 15px;
-
+    padding: 18px 10px;
     text-align: center;
-
-    box-shadow:
-        0 3px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav a {
-    color: #d94f87;
-
     text-decoration: none;
-
-    margin: 0 10px;
-
+    color: #d94f87;
     font-weight: bold;
+    margin: 0 12px;
 }
 
 nav a:hover {
-    color: #b93469;
+    color: #b83268;
 }
 
-
-/* =========================
-   CONTENT
-========================= */
-
-.container {
-    max-width: 1050px;
-
-    margin: auto;
-
+.hero {
+    min-height: 88vh;
+    background: linear-gradient(135deg, #ff8db5, #ffd1e2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 40px 20px;
+    color: white;
 }
 
-section {
-    background: white;
-
-    margin-bottom: 30px;
-
-    padding: 35px;
-
-    border-radius: 25px;
-
-    box-shadow:
-        0 5px 20px rgba(230,90,140,0.12);
+.hero img {
+    width: 210px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid white;
+    margin-bottom: 25px;
 }
 
-.title {
-    color: #df5b8b;
-
-    font-size: 28px;
-
-    margin-bottom: 18px;
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-section p {
+.hero h2 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.hero p {
+    margin-top: 8px;
     font-size: 17px;
 }
 
-
-/* =========================
-   BUTTON
-========================= */
-
 .button {
     display: inline-block;
-
-    margin-top: 20px;
-
-    padding: 12px 25px;
-
-    background: #e85d8b;
-
-    color: white;
-
+    margin-top: 25px;
+    padding: 13px 28px;
+    background: white;
+    color: #d94f87;
     text-decoration: none;
-
     border-radius: 30px;
-
     font-weight: bold;
 }
 
-.button:hover {
-    background: #cf4776;
-}
-
-
-/* =========================
-   SKILLS
-========================= */
-
-.skills {
-    display: grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(220px, 1fr)
-        );
-
-    gap: 15px;
-}
-
-.skill {
-    background: #fff0f6;
-
-    padding: 20px;
-
-    border-radius: 18px;
-
-    text-align: center;
-
-    font-weight: bold;
-}
-
-
-/* =========================
-   CARD
-========================= */
-
-.card-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 25px;
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
 }
 
 .card {
-    background: #fff7fa;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    border: 1px solid #ffd5e5;
-
-    box-shadow:
-        0 5px 15px rgba(230,90,140,0.10);
-
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 10px 25px rgba(230,90,140,0.18);
-}
-
-
-/* =========================
-   รูปกิจกรรม
-========================= */
-
-.card img {
-    width: 100%;
-
-    height: 280px;
-
-    object-fit: cover;
-
-    display: block;
-
-    cursor: pointer;
-}
-
-
-/* =========================
-   รูปเกียรติบัตร
-========================= */
-
-.certificate-card img {
-
-    object-fit: contain;
-
     background: white;
-
-    padding: 8px;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(220,80,130,0.12);
 }
 
-
-/* =========================
-   CARD CONTENT
-========================= */
-
-.card-content {
-    padding: 22px;
-}
-
-.card-content h3 {
+.title {
     color: #d94f87;
-
-    font-size: 20px;
-
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 28px;
 }
 
-.card-content p {
-    font-size: 15px;
-
-    color: #5c4650;
-
-    margin-bottom: 10px;
+.card p {
+    font-size: 17px;
+    line-height: 1.8;
 }
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact {
-    background: #fff5f9;
-}
-
-.contact p {
-    margin: 8px 0;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
 
 footer {
-    background: #df5b8b;
-
+    background: #d94f87;
     color: white;
-
     text-align: center;
-
     padding: 25px;
 }
 
-
-/* =========================
-   IMAGE POPUP
-========================= */
-
-.modal {
-    display: none;
-
-    position: fixed;
-
-    z-index: 999;
-
-    left: 0;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background:
-        rgba(50,20,35,0.85);
-
-    justify-content: center;
-
-    align-items: center;
-
-    padding: 20px;
-}
-
-.modal img {
-    max-width: 95%;
-
-    max-height: 90vh;
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 10px 40px rgba(0,0,0,0.4);
-}
-
-.close {
-    position: absolute;
-
-    top: 20px;
-
-    right: 30px;
-
-    color: white;
-
-    font-size: 40px;
-
-    cursor: pointer;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 700px) {
-
-    .profile {
-        width: 160px;
-        height: 160px;
+@media(max-width:700px) {
+    nav a {
+        display: inline-block;
+        margin: 5px 7px;
+        font-size: 14px;
     }
 
     .hero h1 {
-        font-size: 27px;
+        font-size: 28px;
     }
 
-    .hero h2 {
-        font-size: 18px;
+    .hero img {
+        width: 170px;
+        height: 170px;
     }
-
-    nav a {
-        font-size: 13px;
-        margin: 0 4px;
-    }
-
-    section {
-        padding: 25px;
-    }
-
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .card img {
-        height: 250px;
-    }
-
 }
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
-
-<header>
-
-<div class="hero">
-
-<img
-    src="IMG_5239.jpeg"
-    alt="รูปโปรไฟล์ของฟูจิ"
-    class="profile"
->
-
-<h1>
-    นางสาว จิดาภา เรืองป้อม
-</h1>
-
-<h2>
-    ชื่อเล่น : ฟูจิ
-</h2>
-
-<p>
-    นักเรียนชั้นมัธยมศึกษาปีที่ 6/8
-</p>
-
-<p>
-    โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
-</p>
-
-<a
-    href="#about"
-    class="button"
->
-    🌷 ทำความรู้จักฉัน
-</a>
-
-</div>
-
-</header>
-
-
-<!-- =========================
-     MENU
-========================= -->
-
 <nav>
-
-<a href="#about">
-    เกี่ยวกับฉัน
-</a>
-
-<a href="#goal">
-    เป้าหมาย
-</a>
-
-<a href="./skills.html">
-    ทักษะ
-</a>
-
-<a href="#activities">
-    กิจกรรม
-</a>
-
-<a href="#certificates">
-    เกียรติบัตร
-</a>
-
-<a href="#contact">
-    ติดต่อ
-</a>
-
+    <a href="index.html">🏠 หน้าหลัก</a>
+    <a href="about.html">👩🏻 ประวัติ</a>
+    <a href="portfolio.html">🎀 ผลงาน</a>
+    <a href="certificates.html">🏆 เกียรติบัตร</a>
+    <a href="skills.html">💗 ทักษะ</a>
+    <a href="contact.html">📞 ติดต่อ</a>
 </nav>
 
+<section class="hero">
+    <div>
+        <img src="IMG_5239.jpeg" alt="รูปโปรไฟล์">
+
+        <h1>นางสาว จิดาภา เรืองป้อม</h1>
+
+        <h2>ชื่อเล่น : ฟูจิ</h2>
+
+        <p>นักเรียนชั้นมัธยมศึกษาปีที่ 6/8</p>
+        <p>โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
+
+        <a href="about.html" class="button">
+            🌷 ทำความรู้จักฉัน
+        </a>
+    </div>
+</section>
 
 <div class="container">
 
+    <div class="card">
+        <h2 class="title">🌸 ยินดีต้อนรับสู่ Portfolio</h2>
 
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section id="about">
-
-<h2 class="title">
-    🌷 เกี่ยวกับฉัน
-</h2>
-
-<p>
-    หนูเป็นคนที่ชอบพูดคุยและทำงานร่วมกับผู้อื่น
-    ถึงจะเป็นคนค่อนข้างขี้อาย แต่หนูก็พยายามพัฒนาตัวเอง
-    และกล้าแสดงออกมากขึ้นอยู่เสมอค่ะ
-</p>
-
-<br>
-
-<p>
-    หนูมีความสนใจด้านภาษา การสื่อสาร
-    และการทำงานที่ได้พบปะผู้คน
-    เป็นคนที่พร้อมเรียนรู้สิ่งใหม่ ๆ
-    และพยายามพัฒนาตัวเองอยู่เสมอค่ะ
-</p>
-
-</section>
-
-
-<!-- =========================
-     GOAL
-========================= -->
-
-<section id="goal">
-
-<h2 class="title">
-    🎯 เป้าหมายในอนาคต
-</h2>
-
-<p>
-    ต้องการศึกษาต่อด้านบริหารธุรกิจ
-    โดยสนใจสาขาการจัดการอุตสาหกรรมท่องเที่ยวและบริการ
-    เพราะเป็นสาขาที่ได้ใช้ทั้งทักษะด้านภาษา
-    การสื่อสาร และการทำงานร่วมกับผู้อื่น
-</p>
-
-<br>
-
-<p>
-    หนูอยากนำความรู้ที่ได้รับไปต่อยอดในการทำงาน
-    และมีอาชีพที่มั่นคงในอนาคตค่ะ
-</p>
-
-</section>
-
-
-<!-- =========================
-     SKILLS
-========================= -->
-
-<section>
-
-<h2 class="title">
-    💗 ทักษะของฉัน
-</h2>
-
-<div class="skills">
-
-<div class="skill">
-    💬<br>
-    การสื่อสาร
-</div>
-
-<div class="skill">
-    🤝<br>
-    การทำงานเป็นทีม
-</div>
-
-<div class="skill">
-    🇨🇳<br>
-    ภาษาจีน
-</div>
-
-<div class="skill">
-    🇬🇧<br>
-    ภาษาอังกฤษ
-</div>
+        <p>
+            เว็บไซต์ Portfolio นี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
+            ทักษะ ผลงาน กิจกรรม และเกียรติบัตร
+            เพื่อแสดงถึงประสบการณ์และการพัฒนาตนเองของฉัน
+        </p>
+    </div>
 
 </div>
-
-<a
-    href="./skills.html"
-    class="button"
->
-    🌸 ดูทักษะทั้งหมด
-</a>
-
-</section>
-
-
-<!-- =========================
-     ACTIVITIES
-========================= -->
-
-<section id="activities">
-
-<h2 class="title">
-    🎀 กิจกรรมและประสบการณ์
-</h2>
-
-<div class="card-grid">
-
-
-<!-- กิจกรรมที่ 1 -->
-
-<div class="card">
-
-<img
-    src="activity1.jpeg.JPG"
-    alt="กิจกรรมการเป็นแป๊ะยิ้ม"
-    onclick="openModal(this.src)"
->
-
-<div class="card-content">
-
-<h3>
-    🧧 การเป็นแป๊ะยิ้มในวันตรุษจีน
-</h3>
-
-<p>
-    อีกหนึ่งประสบการณ์ที่ได้ลองทำสิ่งใหม่ ๆ
-    กับการเป็นแป๊ะยิ้มในวันตรุษจีน
-    ได้ทั้งความสนุกและได้ฝึกความกล้าแสดงออก
-    เป็นความทรงจำที่น่ารักและประทับใจมาก
-</p>
-
-</div>
-
-</div>
-
-
-<!-- กิจกรรมที่ 2 -->
-
-<div class="card">
-
-<img
-    src="activity2.jpeg.JPG"
-    alt="กิจกรรมร้องเพลงประสานเสียง"
-    onclick="openModal(this.src)"
->
-
-<div class="card-content">
-
-<h3>
-    🎤 การร้องเพลงประสานเสียง
-</h3>
-
-<p>
-    ประสบการณ์การร้องเพลงประสานเสียงที่ได้ทั้ง
-    ความสนุกและความทรงจำดี ๆ
-    ได้ฝึกการทำงานเป็นทีม
-    และเรียนรู้ว่าทุกเสียงมีความสำคัญ
-    ในการทำให้เพลงออกมาสมบูรณ์
-</p>
-
-</div>
-
-</div>
-
-
-<!-- กิจกรรมที่ 3 -->
-
-<div class="card">
-
-<img
-    src="activity3.jpeg.JPG"
-    alt="กิจกรรมการเป็นดรัมเมเยอร์"
-    onclick="openModal(this.src)"
->
-
-<div class="card-content">
-
-<h3>
-    🥁 การเป็นดรัมเมเยอร์
-</h3>
-
-<p>
-    อีกหนึ่งบทบาทที่ภูมิใจมาก
-    ได้ฝึกทั้งความมั่นใจ ความรับผิดชอบ
-    และความมีระเบียบ
-    เป็นประสบการณ์ที่ทำให้รู้ว่า
-    ตัวเองสามารถทำอะไรได้มากกว่าที่คิด
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     CERTIFICATES
-========================= -->
-
-<section id="certificates">
-
-<h2 class="title">
-    🏆 เกียรติบัตร
-</h2>
-
-<div class="card-grid">
-
-
-<!-- เกียรติบัตรที่ 1 -->
-
-<div class="card certificate-card">
-
-<img
-    src="certificate1.jpeg.JPG"
-    alt="เกียรติบัตร Chinese for Fun One-day Camp"
-    onclick="openModal(this.src)"
->
-
-<div class="card-content">
-
-<h3>
-    🇨🇳 Chinese for Fun: One-day Camp
-</h3>
-
-<p>
-    ได้เข้าร่วมกิจกรรม Chinese for Fun: One-day Camp
-    ของมหาวิทยาลัยธุรกิจบัณฑิตย์
-    ทำให้ได้เรียนรู้และฝึกทักษะภาษาจีน
-    ผ่านกิจกรรมที่สนุกสนาน
-    ได้เปิดประสบการณ์ใหม่ ๆ
-    และพัฒนาความมั่นใจในการใช้ภาษาจีนมากขึ้น
-</p>
-
-<p>
-    📅 วันที่ 1 กุมภาพันธ์ 2025
-</p>
-
-</div>
-
-</div>
-
-
-<!-- เกียรติบัตรที่ 2 -->
-
-<div class="card certificate-card">
-
-<img
-    src="certificate2.jpeg.JPG"
-    alt="เกียรติบัตรการแข่งขันคัดลายมือภาษาจีน"
-    onclick="openModal(this.src)"
->
-
-<div class="card-content">
-
-<h3>
-    ✍️ การแข่งขันคัดลายมือภาษาจีน
-</h3>
-
-<p>
-    ได้เข้าร่วมการแข่งขันคัดลายมือภาษาจีน
-    เป็นกิจกรรมที่ช่วยฝึกสมาธิ
-    ความละเอียดรอบคอบ
-    และทักษะด้านภาษาจีน
-    อีกทั้งยังเป็นประสบการณ์
-    ที่ทำให้ได้พัฒนาตัวเองมากขึ้น
-</p>
-
-<p>
-    📅 วันที่ 1 สิงหาคม 2569
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     HOBBY
-========================= -->
-
-<section>
-
-<h2 class="title">
-    🎵 งานอดิเรกและความสนใจ
-</h2>
-
-<p>
-    ชอบฟังเพลง ดูหนังและซีรีส์
-    นอกจากนี้ยังสนใจเรื่องภาษา
-    การท่องเที่ยว
-    และการเรียนรู้วัฒนธรรมใหม่ ๆ
-</p>
-
-</section>
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section
-    id="contact"
-    class="contact"
->
-
-<h2 class="title">
-    📞 ช่องทางติดต่อ
-</h2>
-
-<p>
-    📱 โทรศัพท์ : 082-215-0897
-</p>
-
-<p>
-    📧 Email : jidapareungpom@gmail.com
-</p>
-
-<p>
-    📷 Instagram : @jidxpa_21
-</p>
-
-</section>
-
-
-</div>
-
-
-<!-- =========================
-     IMAGE MODAL
-========================= -->
-
-<div
-    class="modal"
-    id="imageModal"
->
-
-<span
-    class="close"
-    onclick="closeModal()"
->
-    ×
-</span>
-
-<img
-    id="modalImage"
-    src=""
-    alt="รูปขนาดใหญ่"
->
-
-</div>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
-
-<p>
-    💗 Portfolio ของ จิดาภา เรืองป้อม (ฟูจิ) 💗
-</p>
-
-<p>
-    © 2026 Jidapa Rueangpom
-</p>
-
+    <p>💗 Portfolio ของ จิดาภา เรืองป้อม (ฟูจิ) 💗</p>
+    <p>© 2026 Jidapa Rueangpom</p>
 </footer>
 
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
-<script>
-
-function openModal(imageSrc) {
-
-    document.getElementById("imageModal").style.display = "flex";
-
-    document.getElementById("modalImage").src = imageSrc;
-
-}
-
-
-function closeModal() {
-
-    document.getElementById("imageModal").style.display = "none";
-
-}
-
-
-document
-    .getElementById("imageModal")
-    .addEventListener(
-        "click",
-        function(event) {
-
-            if (event.target === this) {
-
-                closeModal();
-
-            }
-
-        }
-    );
-
-</script>
-
-
 </body>
-
 </html>
