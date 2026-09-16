@@ -3,20 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Portfolio | ฟูจิ</title>
 
 <style>
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Tahoma, sans-serif;
-    background: #fff5f9;
+    background: #fff0f6;
     color: #4d3540;
 }
+
+/* ===== MENU ===== */
 
 nav {
     background: white;
@@ -29,50 +33,62 @@ nav {
 }
 
 nav a {
-    text-decoration: none;
+    display: inline-block;
     color: #d94f87;
+    text-decoration: none;
     font-weight: bold;
-    margin: 0 12px;
+    margin: 5px 10px;
+    padding: 8px 12px;
+    border-radius: 20px;
 }
 
 nav a:hover {
-    color: #b83268;
+    background: #ffe0ec;
 }
 
+/* ===== HERO ===== */
+
 .hero {
-    min-height: 88vh;
-    background: linear-gradient(135deg, #ff8db5, #ffd1e2);
+    min-height: 85vh;
+    background: linear-gradient(135deg, #ff82ad, #ffc5da);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
     color: white;
+    padding: 40px 20px;
 }
 
-.hero img {
+.hero-box {
+    max-width: 800px;
+}
+
+.profile {
     width: 210px;
     height: 210px;
     object-fit: cover;
     border-radius: 50%;
     border: 7px solid white;
-    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .hero h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 38px;
+    margin-top: 25px;
 }
 
 .hero h2 {
     font-size: 22px;
+    margin-top: 8px;
     font-weight: normal;
 }
 
 .hero p {
+    font-size: 18px;
     margin-top: 8px;
-    font-size: 17px;
 }
+
+/* ===== BUTTON ===== */
 
 .button {
     display: inline-block;
@@ -83,12 +99,19 @@ nav a:hover {
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
+.button:hover {
+    background: #fff0f6;
+}
+
+/* ===== CONTENT ===== */
 
 .container {
     max-width: 1000px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 45px 20px;
 }
 
 .card {
@@ -96,92 +119,270 @@ nav a:hover {
     padding: 35px;
     margin-bottom: 30px;
     border-radius: 25px;
-    box-shadow: 0 5px 20px rgba(220,80,130,0.12);
+    box-shadow: 0 5px 20px rgba(230,90,140,0.12);
 }
 
 .title {
-    color: #d94f87;
-    margin-bottom: 20px;
+    color: #df5b8b;
     font-size: 28px;
+    margin-bottom: 15px;
 }
 
 .card p {
     font-size: 17px;
-    line-height: 1.8;
+    line-height: 1.9;
 }
+
+/* ===== MENU CARDS ===== */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.menu-card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 22px;
+    text-decoration: none;
+    color: #4d3540;
+    box-shadow: 0 5px 18px rgba(230,90,140,0.12);
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    background: #fff7fa;
+}
+
+.menu-card .icon {
+    font-size: 45px;
+}
+
+.menu-card h3 {
+    color: #d94f87;
+    margin: 12px 0 5px;
+    font-size: 21px;
+}
+
+.menu-card p {
+    font-size: 14px;
+}
+
+/* ===== FOOTER ===== */
 
 footer {
     background: #d94f87;
     color: white;
     text-align: center;
     padding: 25px;
+    margin-top: 20px;
 }
 
-@media(max-width:700px) {
-    nav a {
-        display: inline-block;
-        margin: 5px 7px;
-        font-size: 14px;
+/* ===== MOBILE ===== */
+
+@media (max-width: 700px) {
+
+    .profile {
+        width: 160px;
+        height: 160px;
     }
 
     .hero h1 {
         font-size: 28px;
     }
 
-    .hero img {
-        width: 170px;
-        height: 170px;
+    .hero h2 {
+        font-size: 19px;
     }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 3px;
+        padding: 6px 8px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- ===== MENU ===== -->
+
 <nav>
+
     <a href="index.html">🏠 หน้าหลัก</a>
-    <a href="about.html">👩🏻 ประวัติ</a>
+
+    <a href="about.html">👩 ประวัติ</a>
+
     <a href="portfolio.html">🎀 ผลงาน</a>
+
     <a href="certificates.html">🏆 เกียรติบัตร</a>
+
     <a href="skills.html">💗 ทักษะ</a>
+
     <a href="contact.html">📞 ติดต่อ</a>
+
 </nav>
 
+
+<!-- ===== HERO ===== -->
+
 <section class="hero">
-    <div>
-        <img src="IMG_5239.jpeg" alt="รูปโปรไฟล์">
+
+    <div class="hero-box">
+
+        <img
+            src="IMG_5239.jpeg"
+            alt="รูปโปรไฟล์ของฟูจิ"
+            class="profile"
+        >
 
         <h1>นางสาว จิดาภา เรืองป้อม</h1>
 
         <h2>ชื่อเล่น : ฟูจิ</h2>
 
         <p>นักเรียนชั้นมัธยมศึกษาปีที่ 6/8</p>
+
         <p>โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
 
         <a href="about.html" class="button">
             🌷 ทำความรู้จักฉัน
         </a>
+
     </div>
+
 </section>
+
+
+<!-- ===== CONTENT ===== -->
 
 <div class="container">
 
+
     <div class="card">
-        <h2 class="title">🌸 ยินดีต้อนรับสู่ Portfolio</h2>
+
+        <h2 class="title">💗 ยินดีต้อนรับสู่ Portfolio ของฟูจิ</h2>
 
         <p>
-            เว็บไซต์ Portfolio นี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
-            ทักษะ ผลงาน กิจกรรม และเกียรติบัตร
-            เพื่อแสดงถึงประสบการณ์และการพัฒนาตนเองของฉัน
+            เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมประวัติ
+            ผลงาน กิจกรรม เกียรติบัตร ทักษะ
+            และข้อมูลต่าง ๆ ของฉัน
         </p>
+
+        <p>
+            สามารถเลือกหัวข้อที่ต้องการดูได้จากเมนูด้านบน
+            หรือเลือกจากเมนูด้านล่างได้เลยค่ะ 🌷
+        </p>
+
+    </div>
+
+
+    <!-- ===== PAGE MENU ===== -->
+
+    <div class="menu-grid">
+
+
+        <a href="about.html" class="menu-card">
+
+            <div class="icon">👩</div>
+
+            <h3>ประวัติ</h3>
+
+            <p>
+                รู้จักตัวตน ความสนใจ
+                และเป้าหมายของฉัน
+            </p>
+
+        </a>
+
+
+        <a href="portfolio.html" class="menu-card">
+
+            <div class="icon">🎀</div>
+
+            <h3>ผลงานและกิจกรรม</h3>
+
+            <p>
+                ชมผลงานและประสบการณ์
+                ที่เคยเข้าร่วม
+            </p>
+
+        </a>
+
+
+        <a href="certificates.html" class="menu-card">
+
+            <div class="icon">🏆</div>
+
+            <h3>เกียรติบัตร</h3>
+
+            <p>
+                รวมเกียรติบัตรและ
+                ประสบการณ์การเข้าร่วมกิจกรรม
+            </p>
+
+        </a>
+
+
+        <a href="skills.html" class="menu-card">
+
+            <div class="icon">💗</div>
+
+            <h3>ทักษะ</h3>
+
+            <p>
+                ทักษะ ความสามารถ
+                และภาษาที่ฉันสนใจ
+            </p>
+
+        </a>
+
+
+        <a href="contact.html" class="menu-card">
+
+            <div class="icon">📞</div>
+
+            <h3>ติดต่อ</h3>
+
+            <p>
+                ช่องทางสำหรับติดต่อฉัน
+            </p>
+
+        </a>
+
+
     </div>
 
 </div>
 
+
+<!-- ===== FOOTER ===== -->
+
 <footer>
-    <p>💗 Portfolio ของ จิดาภา เรืองป้อม (ฟูจิ) 💗</p>
-    <p>© 2026 Jidapa Rueangpom</p>
+
+    <p>💗 Jidapa Rueangpom - Portfolio 💗</p>
+
+    <p>© 2026</p>
+
 </footer>
+
 
 </body>
 </html>
